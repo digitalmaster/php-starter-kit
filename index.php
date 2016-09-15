@@ -10,7 +10,8 @@ class App
     private $endpoint = 'https://api.develop.moreapp.com/api/v1.0/'; // change to api.moreapp.com for production
     private $config = [
         'consumer_key' => 'partner1',
-        'consumer_secret' => '58380cf23b4c3a9bb692aee94e9b5cbf3560a187'
+        'consumer_secret' => '58380cf23b4c3a9bb692aee94e9b5cbf3560a187',
+        'token_secret' => ''
     ];
 
     public function __construct()
