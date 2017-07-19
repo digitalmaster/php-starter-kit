@@ -34,7 +34,23 @@ class App
 
         print_r($customers);
     }
+
+    public function PostFilter()
+    {
+        $response = $this->client->post('customers/900001/folders/c900001a4/forms/2c0f6671443345c881ec50a4a7454814/registrations/filter/0', [
+            json => [
+                pageSize => 100,
+                sort => [],
+                idSelection => [],
+                query => []
+            ]
+        ]);
+
+        $registrations = json_decode($response->getBody()->getContents());
+        print_r($registrations);
+    }
 }
 
 $app = new App();
 $app->getCustomers();
+// $app->PostFilter();
